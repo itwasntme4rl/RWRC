@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real World Roofing Construction Inc</title>
-    
+   
     <!-- Social Media / iMessage Preview -->
     <meta property="og:title" content="Real World Roofing Construction Inc">
     <meta property="og:description" content="Licensed & Insured Roofing in Arkansas. Roof Repair, Replacement, Storm Damage & New Construction.">
@@ -13,15 +13,32 @@
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Real World Roofing">
-    
+   
     <!-- Twitter / Extra iMessage support -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Real World Roofing Construction Inc">
     <meta name="twitter:description" content="Licensed & Insured Roofing in Arkansas">
     <meta name="twitter:image" content="https://www.realworldroofingconstructioninc.work.gd/assets/logo.png">
 
+    <!-- Language Switcher Script -->
+    <script>
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (lang === 'es' && el.getAttribute('data-es')) {
+                    el.textContent = el.getAttribute('data-es');
+                } else {
+                    el.textContent = el.getAttribute('data-en');
+                }
+            });
+        }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
+
 <body>
 <header class="site-header">
 <nav class="nav container">
@@ -36,40 +53,78 @@
 </nav>
 </header>
 
+<div style="text-align: right; padding: 10px; background: #f8f8f8;">
+    <button onclick="switchLanguage('en')">🇺🇸 English</button>
+    <button onclick="switchLanguage('es')">🇪🇸 Español</button>
+</div>
+
 <section class="hero">
-<div class="container hero-grid">
-<div>
-<p class="eyebrow">LICENSED & INSURED ROOFING</p>
-<h1>Quality Roofing. Real Results.</h1>
-<p class="lead">Professional residential and commercial roofing services. Serving Arkansas, and surrounding states.</p>
-<div class="hero-actions">
-<a class="primary-btn" href="#estimate">Free Estimate</a>
-<a class="secondary-btn" href="tel:5015294768">Call Now</a>
-</div>
-</div>
-<div class="owner-card">
-<p>OWNER</p>
-<h2>Geovanny Zelaya</h2>
-<span>LICENSED & INSURED</span>
-</div>
-</div>
+    <div class="container hero-grid">
+        <div>
+            <p class="eyebrow" data-en="LICENSED & INSURED ROOFING" data-es="TECHADO LICENCIADO Y ASEGURADO">LICENSED & INSURED ROOFING</p>
+            
+            <h1 data-en="Quality Roofing. Real Results." data-es="Techado de Calidad. Resultados Reales.">Quality Roofing. Real Results.</h1>
+            
+            <p class="lead" data-en="Professional residential and commercial roofing services. Serving Arkansas, and surrounding states." 
+               data-es="Servicios profesionales de techado residencial y comercial. Sirviendo Arkansas y estados circundantes.">
+                Professional residential and commercial roofing services. Serving Arkansas, and surrounding states.
+            </p>
+            
+            <div class="hero-actions">
+                <a class="primary-btn" href="#estimate" 
+                   data-en="Free Estimate" data-es="Estimado Gratis">Free Estimate</a>
+                <a class="secondary-btn" href="tel:5015294768" 
+                   data-en="Call Now" data-es="Llamar Ahora">Call Now</a>
+            </div>
+        </div>
+        
+        <div class="owner-card">
+            <p data-en="OWNER" data-es="PROPIETARIO">OWNER</p>
+            <h2 data-en="Geovanny Zelaya" data-es="Geovanny Zelaya">Geovanny Zelaya</h2>
+            <span data-en="LICENSED & INSURED" data-es="LICENCIADO Y ASEGURADO">LICENSED & INSURED</span>
+        </div>
+    </div>
 </section>
 
 <section class="quick-contact">
-<div class="container contact-strip">
-<div><strong>PHONE</strong><a href="tel:5015294768">501.529.4768</a></div>
-<div><strong>EMAIL</strong><a href="mailto:realworldroofing@gmail.com">realworldroofing@gmail.com</a></div>
-<div><strong>SERVICE AREA</strong><span>Arkansas & Surrounding States</span></div>
-</div>
+    <div class="container contact-strip">
+        <div>
+            <strong data-en="PHONE" data-es="TELÉFONO">PHONE</strong>
+            <a href="tel:5015294768">501.529.4768</a>
+        </div>
+        <div>
+            <strong data-en="EMAIL" data-es="CORREO">EMAIL</strong>
+            <a href="mailto:realworldroofing@gmail.com">realworldroofing@gmail.com</a>
+        </div>
+        <div>
+            <strong data-en="SERVICE AREA" data-es="ÁREAS DE SERVICIO">SERVICE AREA</strong>
+            <span data-en="Arkansas & Surrounding States" data-es="Arkansas y Estados Circundantes">Arkansas & Surrounding States</span>
+        </div>
+    </div>
 </section>
 
 <section id="services" class="section container">
-<h2>Our Services</h2>
+<h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
 <div class="cards">
-<article class="card"><h3>Roof Repairs</h3><p>Leak repairs, missing shingles and emergency service.</p></article>
-<article class="card"><h3>Roof Replacement</h3><p>Complete tear-offs and full roofing systems.</p></article>
-<article class="card"><h3>Storm Damage</h3><p>Fast inspections and damage assessments.</p></article>
-<article class="card"><h3>New Construction</h3><p>Residential and commercial roofing projects.</p></article>
+<article class="card">
+<h3 data-en="Roof Repairs" data-es="Reparaciones de Techos">Roof Repairs</h3>
+<p data-en="Leak repairs, missing shingles and emergency service." data-es="Reparación de fugas, tejas faltantes y servicio de emergencia.">Leak repairs, missing shingles and emergency service.</p>
+</article>
+
+<article class="card">
+<h3 data-en="Roof Replacement" data-es="Reemplazo de Techos">Roof Replacement</h3>
+<p data-en="Complete tear-offs and full roofing systems." data-es="Arranco completo de tejados y sistemas de techo completos.">Complete tear-offs and full roofing systems.</p>
+</article>
+
+<article class="card">
+<h3 data-en="Storm Damage" data-es="Daños de Tormentas">Storm Damage</h3>
+<p data-en="Fast inspections and damage assessments." data-es="Inspecciones rápidas y evaluaciones de daños.">Fast inspections and damage assessments.</p>
+</article>
+
+<article class="card">
+<h3 data-en="New Construction" data-es="Construcción Nueva">New Construction</h3>
+<p data-en="Residential and commercial roofing projects." data-es="Proyectos de techado residenciales y comerciales.">Residential and commercial roofing projects.</p>
+</article>
 </div>
 </section>
 
@@ -91,48 +146,78 @@
 <section id="estimate" class="estimate-section">
     <div class="container estimate-grid">
         <div>
-            <h2>Request A Free Estimate</h2>
-            <p>Fill out the form and we'll contact you.</p>
+            <h2 data-en="Request A Free Estimate" data-es="Solicitar un Estimado Gratis">Request A Free Estimate</h2>
+            <p data-en="Fill out the form and we'll contact you." data-es="Complete el formulario y nos pondremos en contacto con usted.">Fill out the form and we'll contact you.</p>
         </div>
         
         <form id="estimateForm" class="estimate-form" action="https://formsubmit.co/realworldroofing@gmail.com" method="POST">
-            <label>Name
+            
+            <label>
+                <span data-en="Name" data-es="Nombre">Name</span>
                 <input type="text" name="name" required>
             </label>
-            <label>Phone
+
+            <label>
+                <span data-en="Phone" data-es="Teléfono">Phone</span>
                 <input type="tel" name="phone" required>
             </label>
-            <label>Address
+
+            <label>
+                <span data-en="Address" data-es="Dirección">Address</span>
                 <input type="text" name="address">
             </label>
-            <label>Service Needed
+
+            <label>
+                <span data-en="Service Needed" data-es="Servicio Necesario">Service Needed</span>
                 <select name="service">
-                    <option value="">Select one...</option>
-                    <option>Roof Repair</option>
-                    <option>Roof Replacement</option>
-                    <option>Storm Damage</option>
-                    <option>New Construction</option>
+                    <option value="" data-en="Select one..." data-es="Seleccione uno...">Select one...</option>
+                    <option data-en="Roof Repair" data-es="Reparación de Techos">Roof Repair</option>
+                    <option data-en="Roof Replacement" data-es="Reemplazo de Techos">Roof Replacement</option>
+                    <option data-en="Storm Damage" data-es="Daños de Tormentas">Storm Damage</option>
+                    <option data-en="New Construction" data-es="Construcción Nueva">New Construction</option>
                 </select>
             </label>
-            <label>Message
+
+            <label>
+                <span data-en="Message" data-es="Mensaje">Message</span>
                 <textarea name="message" rows="4"></textarea>
             </label>
             
-            <!-- Hidden fields for FormSubmit -->
             <input type="hidden" name="_subject" value="New Estimate Request from Website!">
             <input type="hidden" name="_captcha" value="false">
             
-            <button class="primary-btn" type="submit">Send Request</button>
+            <button class="primary-btn" type="submit" data-en="Send Request" data-es="Enviar Solicitud">
+                Send Request
+            </button>
+
             <p id="formNote"></p>
         </form>
     </div>
 </section>
 
 <footer class="footer">
-<div class="container footer-grid">
-<div><strong>REAL WORLD ROOFING CONSTRUCTION INC</strong><p>Roofing. Construction. Done Right.</p></div>
-<div><a href="tel:5015294768">501.529.4768</a><br><a href="mailto:realworldroofing@gmail.com">realworldroofing@gmail.com</a></div>
-</div>
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <strong>REAL WORLD ROOFING CONSTRUCTION INC</strong>
+            <p>Roofing • Construction • Done Right</p>
+        </div>
+
+        <div class="footer-contact">
+            <a href="tel:5015294768">501.529.4768</a>
+            <a href="mailto:realworldroofing@gmail.com">realworldroofing@gmail.com</a>
+        </div>
+
+        <div class="footer-area">
+            <strong>Service Area</strong>
+            <p>Arkansas & Surrounding States</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Real World Roofing Construction Inc. All Rights Reserved.</p>
+    </div>
 </footer>
 
 <a href="tel:5015294768" class="floating-call">📞 Call Now</a>
