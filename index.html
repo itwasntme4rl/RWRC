@@ -24,7 +24,10 @@
 
     <!-- Language Switcher Script -->
     <script>
+        window.currentLanguage = 'en';
+
         function switchLanguage(lang) {
+            window.currentLanguage = lang;
             document.documentElement.lang = lang;
             document.querySelectorAll('[data-en]').forEach(el => {
                 if (lang === 'es' && el.getAttribute('data-es')) {
@@ -33,11 +36,12 @@
                     el.textContent = el.getAttribute('data-en');
                 }
             });
+            window.dispatchEvent(new CustomEvent('languagechange', { detail: { lang } }));
         }
     </script>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico?v=2">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="canonical" href="https://realworldroofing.com">
 </head>
 
@@ -57,7 +61,7 @@
 </nav>
 </header>
 
-<div style="text-align: right; padding: 10px; background: #f8f8f8;">
+<div class="language-strip">
     <button onclick="switchLanguage('en')">🇺🇸 English</button>
     <button onclick="switchLanguage('es')">🇪🇸 Español</button>
 </div>
@@ -89,17 +93,7 @@
         Geovanny Zelaya
     </h2>
 
-    <span
-        data-en="25+ YEARS OF EXPERIENCE"
-        data-es="MÁS DE 25 AÑOS DE EXPERIENCIA">
-        25+ YEARS OF EXPERIENCE
-    </span>
-
-    <span
-        data-en="LICENSED & INSURED"
-        data-es="LICENCIADO Y ASEGURADO">
-        LICENSED & INSURED
-    </span>
+    <span id="ownerTypewriter" class="typewriter-text" aria-live="polite"></span>
 </div>
 
     </div>
