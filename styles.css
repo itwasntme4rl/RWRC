@@ -36,7 +36,7 @@ body.loading {
 
 .page-loader img {
   width: min(260px, 70vw);
-  animation: loader-spin 1.15s linear infinite;
+  animation: loader-zoom 4s ease-in-out forwards;
 }
 
 .page-loader.hide {
@@ -45,9 +45,25 @@ body.loading {
   pointer-events: none;
 }
 
-@keyframes loader-spin {
-  to {
-    transform: rotate(360deg);
+@keyframes loader-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(.82);
+  }
+
+  18% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  78% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(4.2);
   }
 }
 
